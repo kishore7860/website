@@ -15,15 +15,10 @@ const Resume = () => {
         >
           Download Resume
         </a>
-        <iframe
-            src={`${process.env.PUBLIC_URL}/Resume.pdf`}
-            title="Resume"
-            className="w-full h-full"
-        />
 
         <div className="border rounded-xl shadow-md overflow-hidden h-[750px]">
           <iframe
-            src="/Resume.pdf"
+            src={`${process.env.PUBLIC_URL}/Resume.pdf`}
             title="Kishore Reddy Resume"
             className="w-full h-full"
           />
