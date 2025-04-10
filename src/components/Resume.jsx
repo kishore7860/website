@@ -18,7 +18,7 @@ const Resume = () => {
 
         <div className="border rounded-xl shadow-md overflow-hidden h-[750px]">
           <iframe
-            src={`${process.env.PUBLIC_URL}/Resume.pdf`}
+            src="https://raw.githubusercontent.com/kishore7860/website/main/public/Resume.pdf"
             title="Kishore Reddy Resume"
             className="w-full h-full"
           />
