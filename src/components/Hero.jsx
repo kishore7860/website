@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Right image */}
       <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
         <img
-          src="/profile.jpg"
+          src={`${process.env.PUBLIC_URL}/profile.jpg`} 
           alt="Kishore Reddy"
           className="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-teal-400"
         />
