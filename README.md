@@ -17,13 +17,13 @@ A clean, professional, and responsive portfolio website built using **React** an
 
 - **React**
 - **Tailwind CSS**
-- **EmailJS** or **FormSubmit** (for contact form)
-- **GitHub Pages / Netlify** (for deployment)
+- **FormSubmit** (for contact form)
+- **GitHub Pages** (for deployment)
 
 ## 📬 Contact Me
 
 - 📧 Email: mamidikishorereddy@gmail.com  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/kishore-reddy-mamidi-0a0b8519a)  
 - 💻 [GitHub](https://github.com/kishore7860)  
-- 📸 Instagram: @yourusername  
-- 🐦 X (Twitter): @yourhandle
+- 📸 Instagram: @kishorereddy7221
+- 🐦 X (Twitter): @Kishore14688953
