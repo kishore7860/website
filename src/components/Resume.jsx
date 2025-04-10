@@ -17,11 +17,11 @@ const Resume = () => {
         </a>
 
         <div className="border rounded-xl shadow-md overflow-hidden h-[750px]">
-          <iframe
-            src="https://raw.githubusercontent.com/kishore7860/website/main/public/Resume.pdf"
+        <iframe
+            src={`https://docs.google.com/gview?url=https://kishore7860.github.io/website/Resume.pdf&embedded=true`}
             title="Kishore Reddy Resume"
             className="w-full h-full"
-          />
+        ></iframe>
         </div>
       </div>
     </section>
