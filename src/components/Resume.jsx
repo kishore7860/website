@@ -9,14 +9,14 @@ const Resume = () => {
           Click below to download my resume or view the embedded version.
         </p>
         <a
-          href={`${process.env.PUBLIC_URL}/Kishore_Reddy_Resume.pdf`}
+          href={`${process.env.PUBLIC_URL}/Resume.pdf`}
           download
           className="inline-block bg-teal-600 text-white px-6 py-2 rounded-full shadow hover:bg-teal-700 transition mb-6"
         >
           Download Resume
         </a>
         <iframe
-            src={`${process.env.PUBLIC_URL}/Kishore_Reddy_Resume.pdf`}
+            src={`${process.env.PUBLIC_URL}/Resume.pdf`}
             title="Resume"
             className="w-full h-full"
         />
