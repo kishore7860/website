@@ -1,42 +1,56 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
+import { Player } from '@lottiefiles/react-lottie-player';
+import aiAnimation from '../assets/ai-animation.json';
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-20"
-    >
-      {/* Left content */}
-      <div className="md:w-1/2 text-center md:text-left">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
-          Hello, I'm <span className="text-teal-600">Kishore Reddy Mamidi</span>
+    <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-gray-100 min-h-screen">
+      <div className="max-w-xl">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          Hi, I'm <span className="text-teal-600">Kishore Reddy Mamidi</span>
+        </h1>
+        <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+          <Typewriter
+            words={[
+              'AI Engineer',
+              'RAG Architect',
+              'MLOps Developer',
+              'Full-Stack ML Engineer',
+            ]}
+            loop
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
         </h2>
-        <p className="text-lg text-gray-600 mb-6">
-            AI Developer with a Passion for Learning, Building, and Impact.
+        <p className="text-gray-600 mb-6">
+          I build intelligent applications with LLMs, scalable MLOps pipelines, and impactful AI solutions.
         </p>
-        <div className="flex justify-center md:justify-start space-x-4 text-2xl text-teal-600">
-          <a href="https://github.com/kishore7860" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
+        <div className="flex gap-4">
+          <a
+            href="/Kishore_Resume.pdf"
+            className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:bg-teal-700 transition"
+            download
+          >
+            📄 Download Resume
           </a>
-          <a href="https://www.linkedin.com/in/kishore-reddy-mamidi-0a0b8519a" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="https://www.instagram.com/kishorereddy7221/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-          <a href="https://x.com/Kishore14688953" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
+          <a
+            href="#projects"
+            className="text-teal-600 font-semibold border border-teal-600 px-6 py-3 rounded-lg hover:bg-teal-600 hover:text-white transition"
+          >
+            🔍 View Projects
           </a>
         </div>
       </div>
 
-      {/* Right image */}
-      <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
-        <img
-          src={`${process.env.PUBLIC_URL}/profile.jpg`} 
-          alt="Kishore Reddy"
-          className="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-teal-400"
+      <div className="w-full md:w-1/2 mt-10 md:mt-0">
+        <Player
+          autoplay
+          loop
+          src={aiAnimation}
+          className="w-full h-full"
         />
       </div>
     </section>

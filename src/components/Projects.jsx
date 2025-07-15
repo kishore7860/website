@@ -1,48 +1,43 @@
 import React from 'react';
+import ProjectCard from './ProjectCard';
 
 const projects = [
   {
-    title: 'House Price Prediction (MLOps Pipeline)',
+    title: "RAG-Powered Document Q&A Chatbot",
     description:
-      'Built a production-ready ML pipeline using MLflow and ZenML with deep EDA, experiment tracking, CI/CD, and cloud deployment. Focused on clean code, reproducibility, and real-world deployment.',
-    technologies: ['Python', 'MLflow', 'ZenML', 'CI/CD', 'Docker', 'AWS'],
-    github: 'https://github.com/kishore7860/prices-predictor-system.git',
+      "AI-driven app that uses LangChain & Hugging Face for PDF-based Q&A with vector search via Pinecone.",
+    image: "/assets/preview-rag-chatbot.gif",
+    techStack: ["LangChain", "HuggingFace", "Pinecone", "Streamlit", "Docker"],
+    github: "https://github.com/kishore7860/rag-chatbot",
+    demo: "https://rag-chatbot-demo.streamlit.app/",
   },
   {
-    title: 'AI Tutor & Quiz Generator (RAG + LLM)',
+    title: "Predictive Maintenance (CMAPSS)",
     description:
-      'Developed a personalized AI tutor and quiz generator using OpenAI APIs, Retrieval-Augmented Generation, and prompt engineering. Features multilingual support, fine-tuned models, Docker containers, and AWS deployment.',
-    technologies: ['OpenAI', 'RAG', 'LLM', 'Docker', 'AWS'],
-    github: 'https://github.com/kishore7860/AI-tutor.git',
+      "Jet engine failure prediction model using LSTM, deployed via FastAPI & visualized with Streamlit.",
+    image: "/assets/preview-maintenance.gif",
+    techStack: ["TensorFlow", "Scikit-learn", "FastAPI", "AWS", "MLflow"],
+    github: "https://github.com/kishore7860/predictive-maintenance",
+    demo: "#",
+  },
+  {
+    title: "Pneumonia Detection with X-rays",
+    description:
+      "ResNet-based PyTorch classifier deployed with Flask & Kubernetes for real-time inference.",
+    image: "/assets/preview-xray.gif",
+    techStack: ["PyTorch", "ResNet", "Flask", "Kubernetes", "Plotly"],
+    github: "https://github.com/kishore7860/pneumonia-detection",
+    demo: "#",
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gray-50 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-teal-600 text-center mb-12">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white shadow-md p-6 rounded-2xl hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="text-sm text-teal-600 mb-2">
-                {project.technologies.join(' • ')}
-              </div>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 text-teal-600 font-medium hover:underline"
-              >
-                View on GitHub →
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <ProjectCard key={index} {...project} />
+      ))}
+    </div>
   );
 };
 
